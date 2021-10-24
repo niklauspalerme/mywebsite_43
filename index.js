@@ -17,6 +17,7 @@ app.get('/', function(req, res) {
 
 app.post('/users', async (req, res) => {
   try {
+    console.log("New request POST to /users");
     await mongo.addNewUser();
     res.sendStatus(200);
   } catch (err) {
